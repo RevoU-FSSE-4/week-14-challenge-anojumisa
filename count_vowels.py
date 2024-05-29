@@ -15,7 +15,15 @@ def count_vowels(s: str) -> int:
     - count_vowels("python") should return 1
     """
     # Implement your solution here
-    pass
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+
+print(count_vowels("python"))
+    
 
 # You can test your function with print statements below
 # Example:
