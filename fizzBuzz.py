@@ -16,7 +16,18 @@ def fizzbuzz(n: int) -> list:
     - fizzbuzz(15) should return ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]
     """
     # Implement your solution here
-    pass
+    fizzbuzz_list = []
+    for i in range(1, n + 1):
+        if i % 15 == 0:  
+            fizzbuzz_list.append("FizzBuzz")
+        elif i % 3 == 0:  
+            fizzbuzz_list.append("Fizz")
+        elif i % 5 == 0:  
+            fizzbuzz_list.append("Buzz")
+        else:
+            fizzbuzz_list.append(str(i))  
+    return fizzbuzz_list
+print(fizzbuzz(15))
 
 # You can test your function with print statements below
 # Example:
