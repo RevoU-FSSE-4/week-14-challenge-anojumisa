@@ -1,5 +1,6 @@
 # anagram.py
-
+import re 
+from collections import Counter
 def is_anagram(s1: str, s2: str) -> bool:
     """
     This function checks if the two given strings `s1` and `s2` are anagrams.
@@ -22,9 +23,9 @@ def is_anagram(s1: str, s2: str) -> bool:
     # Step 2: Compare the character counts of both cleaned strings
     
     # Implement your solution here
-    s1 = s1.replace(" ", "").lower()
-    s2 = s2.replace(" ", "").lower()
-    return sorted(s1) == sorted(s2)
+    clean_s1 = re.sub(r'\W+', '', s1).lower()
+    clean_s2 = re.sub(r'\W+', '', s2).lower()
+    return Counter(clean_s1) == Counter(clean_s2)
 
 print(is_anagram("Conversation", "Voices rant on")) 
 pass
