@@ -26,6 +26,7 @@ def is_anagram(s1: str, s2: str) -> bool:
     s2 = s2.replace(" ", "").lower()
     return sorted(s1) == sorted(s2)
 
+print(is_anagram("Conversation", "Voices rant on")) 
 # You can test your function with print statements below
 # Example:
 # print(is_anagram("Listen", "Silent"))  # Expected output: True
