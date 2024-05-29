@@ -22,7 +22,9 @@ def is_anagram(s1: str, s2: str) -> bool:
     # Step 2: Compare the character counts of both cleaned strings
     
     # Implement your solution here
-    pass
+    s1 = s1.replace(" ", "").lower()
+    s2 = s2.replace(" ", "").lower()
+    return sorted(s1) == sorted(s2)
 
 # You can test your function with print statements below
 # Example:
