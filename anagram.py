@@ -45,7 +45,7 @@ def is_anagram(s1: str, s2: str) -> bool:
     return char_count(cleaned_s1) == char_count(cleaned_s2)
 
 print(is_anagram("hello", "billion")) 
-pass
+
 # You can test your function with print statements below
 # Example:
 # print(is_anagram("Listen", "Silent"))  # Expected output: True
